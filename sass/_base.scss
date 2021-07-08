@@ -36,6 +36,10 @@ Grey dark 3: #999
 	--line: 1px solid var(--grey-light-2);
 }
 
+$bp-largest: 75em; // 1200 px / 16 = 75
+$bt-larg: 68.75em; // 1100px
+$bt-medium: 56.25em; // 900px
+
 *,
 *::before,
 *::after {
@@ -46,6 +50,10 @@ Grey dark 3: #999
 
 html {
 	font-size: 62.5%;
+
+	@media only screen and (max-width: $bt-larg) {
+		font-size: 50%;
+	}
 }
 
 body {

@@ -107,10 +107,22 @@
 	font-size: 1.4rem;
 	list-style: none;
 	margin-top: 3.5rem;
+	@media only screen and (max-width: $bt-medium) {
+		display: flex;
+		margin-top: 0;
+	}
 	&__item {
 		position: relative;
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
+
+			@media only screen and (max-width: $bt-medium) {
+				margin-bottom: 0;
+			}
+		}
+
+		@media only screen and (max-width: $bt-medium) {
+			flex: 1;
 		}
 	}
 	&__item::before {
@@ -139,12 +151,17 @@
 		color: var(--grey-light-1);
 		text-decoration: none;
 		text-transform: uppercase;
-		display: inline-block;
+		display: block;
 		padding: 1.5rem 3rem;
 		display: flex;
 		align-items: center;
 		z-index: 10;
 		position: relative;
+
+		@media only screen and (max-width: $bt-medium) {
+			justify-content: center;
+			padding: 2rem;
+		}
 	}
 
 	&__icon {
@@ -160,6 +177,10 @@
 	text-align: center;
 	padding: 2.5rem;
 	color: var(--grey-light-4);
+
+	@media only screen and (max-width: $bt-medium) {
+		display: none;
+	}
 }
 
 .gallery {
@@ -309,6 +330,10 @@
 	justify-content: space-between;
 	align-items: center;
 
+	&__friends {
+		display: flex;
+	}
+
 	&__photo {
 		box-sizing: content-box;
 		height: 4rem;
@@ -317,7 +342,7 @@
 		border: 3px solid #fff;
 
 		&:not(:last-child) {
-			margin-right: -1.5rem;
+			margin-right: -2rem;
 		}
 	}
 }
@@ -329,6 +354,11 @@
 	margin-bottom: 3.5rem;
 	position: relative;
 	overflow: hidden;
+
+	@media only screen and (max-width: $bt-medium) {
+		padding: 2rem;
+		margin-bottom: 3rem;
+	}
 	&__text {
 		z-index: 10;
 		position: relative;
@@ -386,6 +416,9 @@
 .cta {
 	padding: 3.5rem 0;
 	text-align: center;
+	@media only screen and (max-width: $bt-medium) {
+		padding: 2.5rem 0;
+	}
 	&__book-now {
 		text-transform: uppercase;
 		font-size: 2rem;
